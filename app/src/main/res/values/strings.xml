@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CoffeeShop</string>
+    <string name="title_activity_coffee_detail">CoffeeDetailActivity</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

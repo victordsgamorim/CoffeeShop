@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/coffee_shop_detail_image"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_newsletter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@android:color/background_light"
+        android:src="@drawable/newsletter_black_white"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/coffee_shop_detail_line"
+        app:layout_constraintEnd_toStartOf="@+id/coffe_shop_detail_view"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <View
+        android:id="@+id/coffee_shop_detail_line"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="@color/gold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/coffee_shop_detail_image"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/coffee_shop_detail_image"
+        app:layout_constraintTop_toBottomOf="@+id/coffee_shop_detail_image"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/coffee_shop_detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:padding="8dp"
+        android:text="Name"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="@+id/coffee_shop_detail_image"
+        app:layout_constraintEnd_toEndOf="@+id/coffee_shop_detail_image"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="@+id/coffee_shop_detail_image"
+        app:layout_constraintTop_toTopOf="@+id/coffee_shop_detail_image"
+        app:layout_constraintVertical_bias="0.159" />
+
+    <View
+        android:id="@+id/coffe_shop_detail_view"
+        android:layout_width="180dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/coffee_shop_detail_image"
+        app:layout_constraintEnd_toEndOf="@+id/coffee_shop_detail_image"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/coffee_shop_detail_name"
+        app:layout_constraintTop_toBottomOf="@+id/coffee_shop_detail_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/coffe_shop_detail_opening_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Opening Hours"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/coffe_shop_detail_view"
+        app:layout_constraintEnd_toEndOf="@+id/coffe_shop_detail_view"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/coffe_shop_detail_view"
+        app:layout_constraintTop_toTopOf="@+id/coffe_shop_detail_view"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <TextView
+        android:id="@+id/coffe_shop_detail_opening_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="day 01"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/coffe_shop_detail_view"
+        app:layout_constraintEnd_toEndOf="@+id/coffe_shop_detail_opening_hour"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/coffe_shop_detail_opening_hour"
+        app:layout_constraintTop_toBottomOf="@+id/coffe_shop_detail_opening_hour"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/coffe_shop_detail_opening_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="day 02"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/coffe_shop_detail_view"
+        app:layout_constraintEnd_toEndOf="@+id/coffe_shop_detail_opening_1"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@+id/coffe_shop_detail_opening_1"
+        app:layout_constraintTop_toBottomOf="@+id/coffe_shop_detail_opening_1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/coffe_shop_detail_opening_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="day 03"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/coffee_shop_detail_image"
+        app:layout_constraintEnd_toEndOf="@+id/coffe_shop_detail_opening_2"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@+id/coffe_shop_detail_opening_2"
+        app:layout_constraintTop_toBottomOf="@+id/coffe_shop_detail_opening_2" />
+
+</android.support.constraint.ConstraintLayout>

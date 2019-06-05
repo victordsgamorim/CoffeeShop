@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <Button
+        android:id="@+id/button_expandable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_information"
+        android:text="CONTACT INFORMATION"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/examplandle_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:ael_duration="500"
+        app:ael_expanded="true"
+        app:ael_interpolator="accelerate"
+        app:ael_orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_expandable"
+        app:layout_constraintVertical_bias="0">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/contact_image_telephone"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/telephone"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.05" />
+
+            <TextView
+                android:id="@+id/contact_telephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Numero de telefone"
+                app:layout_constraintBottom_toBottomOf="@id/contact_image_telephone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/contact_image_telephone"
+                app:layout_constraintTop_toTopOf="@+id/contact_image_telephone"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/contact_image_mobile"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/smartphone_call"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/contact_image_telephone"
+                app:layout_constraintStart_toStartOf="@+id/contact_image_telephone"
+                app:layout_constraintTop_toBottomOf="@+id/contact_image_telephone"
+                app:layout_constraintVertical_bias="0.025" />
+
+            <TextView
+                android:id="@+id/contact_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:text="Numero de celular"
+                app:layout_constraintBottom_toBottomOf="@+id/contact_image_mobile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/contact_image_mobile"
+                app:layout_constraintTop_toTopOf="@+id/contact_image_mobile"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/contact_image_email"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/arroba"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/contact_image_mobile"
+                app:layout_constraintStart_toStartOf="@id/contact_image_mobile"
+                app:layout_constraintTop_toBottomOf="@+id/contact_image_mobile"
+                app:layout_constraintVertical_bias="0.025" />
+
+            <TextView
+                android:id="@+id/contact_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:text="Endereco de email"
+                app:layout_constraintBottom_toBottomOf="@+id/contact_image_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.012"
+                app:layout_constraintStart_toEndOf="@+id/contact_image_email"
+                app:layout_constraintTop_toTopOf="@+id/contact_image_email"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/contact_image_website"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/domain"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/contact_image_email"
+                app:layout_constraintStart_toStartOf="@id/contact_image_email"
+                app:layout_constraintTop_toBottomOf="@+id/contact_image_email"
+                app:layout_constraintVertical_bias="0.025" />
+
+            <TextView
+                android:id="@+id/contact_url_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:text="Site"
+                app:layout_constraintBottom_toBottomOf="@+id/contact_image_website"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/contact_image_website"
+                app:layout_constraintTop_toTopOf="@+id/contact_image_website"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+    <View
+        android:id="@+id/button_information_arrow_down"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_button_information"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/examplandle_content"
+        app:layout_constraintStart_toStartOf="@id/examplandle_content"
+        app:layout_constraintTop_toBottomOf="@id/examplandle_content"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+</android.support.constraint.ConstraintLayout>
